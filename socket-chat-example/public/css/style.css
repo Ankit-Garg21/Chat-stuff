@@ -22,7 +22,7 @@ form input {
     width: 90%;
 }
 
-form button {
+form #button {
     width: 9%;
     background: rgb(130, 224, 255);
     border: none;
@@ -41,4 +41,10 @@ form button {
 
 #messages li:nth-child(odd) {
     background: #eee;
+}
+
+#notify-user {
+    position: fixed;
+    bottom: 45px;
+    width: 100%;
 }

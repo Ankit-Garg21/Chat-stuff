@@ -9,8 +9,12 @@ app.get('/', function(req, res){
 io.on("connection", function(socket) {
     console.log("A user connected");
 
-    socket.on("chat message", function(msg) {
-        io.emit("chat message", msg);
+    socket.on("chat message", function(from, msg) {
+        io.emit("chat message", from, msg);
+    });
+
+    socket.on("notify user", function(user) {
+        io.emit("notify user", user);
     });
 
     socket.on("disconnect", function() {

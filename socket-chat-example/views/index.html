@@ -8,9 +8,11 @@
 
     <body>
         <ul id="messages"></ul>
+        <span id="notify-user"></span>
         <form action="">
+            <input type="hidden" id="user" value="" />
             <input id="m" autocomplete="off" />
-            <button>Send</button>
+            <input type="submit" value="Send" id="button" />
         </form>
 
         <script src="js/external/socket.io.min.js"></script>
